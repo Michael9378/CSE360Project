@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane fx:id="loginScreen" maxHeight="600.0" maxWidth="800.0" minHeight="600.0" minWidth="800.0" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="cse360.view.LoginController">
+   <children>
+      <Pane prefHeight="600.0" prefWidth="800.0" style="-fx-background-color: #a14949;">
+         <children>
+            <Button fx:id="loginButton" layoutX="360.0" layoutY="424.0" mnemonicParsing="false" text="Login" />
+            <Label layoutX="334.0" layoutY="283.0" prefHeight="35.0" prefWidth="97.0" text="Enter Password">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="184.0" layoutY="127.0" prefHeight="53.0" prefWidth="416.0" text="Car System Enterprise 360">
+               <font>
+                  <Font size="36.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <PasswordField fx:id="passwordField" layoutX="308.0" layoutY="354.0" />
+   </children>
+</AnchorPane>

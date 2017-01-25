@@ -1,0 +1,25 @@
+package cse360.model;
+
+import static org.junit.Assert.*;
+
+import org.junit.Test;
+
+public class contactModelTest {
+
+	@Test
+	public void testGetName() {
+		ContactModel MH = new ContactModel("Kage","4803333333");
+		String output = MH.getName();
+		String expect = "Kage";
+		assertEquals(output,expect);
+	}
+	@Test
+	public void testGetNumber() {
+		ContactModel MH = new ContactModel("Kage","4803333333");
+		String output = MH.getPhoneNumber();
+		String expect = "4803333333";
+		assertEquals(output,expect);
+}
+	
+
+}

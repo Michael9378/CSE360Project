@@ -1,0 +1,54 @@
+package cse360.model;
+
+import static org.junit.Assert.*;
+
+import org.junit.Test;
+
+public class StationModelTest {
+
+	@Test
+	public void testName() {
+		StationModel Abate = new StationModel("Steve", "AA", 98.7, "trance.mp3");
+		String out =  Abate.getName();
+		String exp = "Steve";
+		assertEquals(out,exp);
+		Abate.setName("Bizz");
+		String out2 =  Abate.getName();
+		assertEquals(out2,"Bizz");
+	}
+	@Test
+	public void testDesc(){
+		StationModel Abate = new StationModel("Steve", "AA", 98.7, "trance.mp3");
+		String out = Abate.getDesc();
+		String exp = "AA";
+		assertEquals(out,exp);
+		Abate.setDesc("EE");
+		String out2 = Abate.getDesc();
+		assertEquals(out2, "EE");
+	}
+	@Test
+	public void testFreq(){
+		StationModel Abate = new StationModel("Steve", "AA", 98.7, "trance.mp3");
+		double out = Abate.getFrequency();
+		double exp = 98.7;
+		int f = 4;
+		assertEquals(exp,out, 0);
+		Abate.setFrequency(99.9);;
+		double out2 = Abate.getFrequency();
+		assertEquals(out2, 99.9,0);
+	}
+	public void testMP3(){
+		StationModel Abate = new StationModel("Steve", "AA", 98.7, "trance.mp3");
+		String out = Abate.getMP3();
+		String exp = "trance.mp3";
+		assertEquals(out,exp);
+		Abate.setDesc("techno.mp3");
+		String out2 = Abate.getMP3();
+		assertEquals(out2, "techno.mp3");
+	}
+		
+		
+		
+		
+	}
+

@@ -1,0 +1,29 @@
+package cse360.model;
+
+import static org.junit.Assert.*;
+
+import org.junit.Test;
+
+public class TripModelTest {
+
+	@Test
+	public void testVelocity() {
+		TripModel Armada = new TripModel();
+		Armada.setVelocity(30);
+		int exp = 30;
+		int out = Armada.getVelocity();
+		assertEquals(exp,out,0);
+		boolean expec = true;
+		boolean out2 = Armada.setVelocity(5);
+		assertEquals(out2,expec);
+		boolean out3 = Armada.setVelocity(-5);
+		assertEquals(out3,false);
+	}
+	public void testAcceleration(){
+		TripModel Armada = new TripModel();
+		Armada.setAcceleration(5);
+		int r = Armada.getAcceleration();
+		assertEquals(r,5);
+		
+	}
+}

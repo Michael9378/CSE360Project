@@ -1,0 +1,21 @@
+package cse360.model;
+
+import static org.junit.Assert.*;
+
+import org.junit.Test;
+
+public class RadioModelTest {
+
+	
+	@Test
+	public void testVolume() {
+		RadioModel The_End = new RadioModel();
+		The_End.setVolume(5);
+		double output =	The_End.getVolume();
+		double expectedOutput = 5;
+		
+		
+		assertEquals(output,expectedOutput,5);
+	}
+
+}

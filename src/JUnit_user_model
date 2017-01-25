@@ -1,0 +1,29 @@
+package cse360.model;
+
+import static org.junit.Assert.*;
+
+import org.junit.Test;
+
+public class UserModelTest {
+
+	@Test
+	public void testContact() {
+		UserModel user = new UserModel("Bizzaro_Flame");
+		boolean bol = user.addContact("Ganon", "411");
+		assertEquals(bol,true);
+		user.addContact("Link", "511");
+		user.addContact("Zelda", "611");
+		user.addContact("Luigi", "711");
+		int find = user.findContact("Zelda");
+		int exp = 2;
+		assertEquals(find,exp);
+		int find2 = user.findContact("Scorp");
+		int notFound = -1;
+		assertEquals(find2,notFound);
+		boolean DK = user.removeContact("Link");
+		assertEquals(DK,true);
+		boolean Peach = user.removeContact("Scorp");
+		assertEquals(Peach, false);
+	}
+
+}

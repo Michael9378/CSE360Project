@@ -1,0 +1,34 @@
+package cse360.model;
+
+import static org.junit.Assert.*;
+
+import org.junit.Test;
+
+public class modelCarTestCase {
+	@Test
+	public void testHasFuel(){
+		CarModel car = new CarModel();
+		car.fuel = 0;
+		boolean b =  car.hasFuel();
+		assertEquals(b,false); // since fuel is set to zero hasFuel should return false
+		
+		car.fuel = 1;
+		boolean a = car.hasFuel();
+		assertEquals(a, true);
+	}
+	@Test
+	public void testaddFuel() {
+		CarModel car = new CarModel();
+		boolean output =  car.addFuel(13); 
+		boolean expout = true;
+		assertEquals(output, expout);
+	}
+	@Test
+	public void testCanstart(){
+		CarModel car = new CarModel(); // a new car starts with 1 fuel
+		boolean c = car.canStart(); // since theres gas in the car it should start
+		boolean expectedOutput = true;
+		assertEquals(c, expectedOutput);
+	}
+
+}
